@@ -48,7 +48,11 @@
   }
 
   body {
-    @apply font-nunito bg-budget-cream m-0 p-0 h-screen overflow-hidden;
+    @apply font-nunito m-0 p-0 h-screen overflow-hidden;
+    background-image: url('/lovable-uploads/a17aed36-ebbd-4e09-986a-57bc459a1406.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
   .text-shadow {
@@ -60,7 +64,7 @@
   }
 
   .budget-container {
-    @apply mx-auto my-0 max-w-md overflow-hidden bg-budget-teal rounded-[3rem] min-h-screen relative flex flex-col;
+    @apply mx-auto my-0 max-w-md overflow-hidden bg-budget-teal/90 backdrop-blur-sm rounded-[3rem] min-h-screen relative flex flex-col;
     box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
   }
 
