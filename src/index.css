@@ -53,6 +53,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
   }
 
   .text-shadow {
@@ -125,4 +126,12 @@
 
 .font-nunito {
   font-family: 'Nunito', sans-serif;
+}
+
+/* Make sure the root div fills the viewport */
+#root {
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
 }
