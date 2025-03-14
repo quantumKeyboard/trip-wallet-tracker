@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -35,67 +38,86 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply font-nunito bg-budget-cream m-0 p-0 h-screen overflow-hidden;
   }
+
+  .text-shadow {
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .text-shadow-sm {
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .budget-container {
+    @apply mx-auto my-0 max-w-md overflow-hidden bg-budget-teal rounded-[3rem] min-h-screen relative flex flex-col;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  .input-field {
+    @apply w-full p-4 text-lg border-2 border-budget-burgundy rounded-full bg-budget-cream shadow-inner-strong;
+  }
+
+  .transaction-item {
+    @apply flex items-center w-full mb-3 bg-budget-cream rounded-full overflow-hidden transition-transform;
+  }
+}
+
+@layer components {
+  .budget-header {
+    @apply relative py-5 px-4 bg-budget-burgundy text-white font-extrabold rounded-t-[3rem] rounded-b-[2rem] text-center text-4xl;
+  }
+
+  .add-button {
+    @apply fixed bottom-6 right-6 w-16 h-16 bg-budget-teal text-white text-4xl flex items-center justify-center rounded-full shadow-budget-button border-2 border-white z-10 transition-transform;
+  }
+
+  .add-button:active {
+    @apply transform scale-95;
+  }
+
+  .modal-container {
+    @apply fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 transition-opacity;
+  }
+
+  .modal-content {
+    @apply bg-budget-teal p-8 rounded-[2rem] w-11/12 max-w-md transform transition-all border-4 border-black animate-slide-in;
+  }
+
+  .modal-btn {
+    @apply rounded-full py-3 px-8 font-bold text-lg transition-transform;
+  }
+
+  .modal-btn:active {
+    @apply transform scale-95;
+  }
+
+  .cancel-btn {
+    @apply bg-budget-burgundy text-white;
+  }
+
+  .add-btn {
+    @apply bg-budget-cream text-budget-burgundy;
+  }
+}
+
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
+}
+
+.font-nunito {
+  font-family: 'Nunito', sans-serif;
 }
